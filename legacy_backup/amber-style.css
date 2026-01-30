@@ -1,0 +1,93 @@
+/* High-End Category Styles */
+:root {
+  --gold-premium: #C5A059;
+}
+
+.banner {
+  width: 100%;
+  height: 70vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('https://i.pinimg.com/1200x/7d/a1/0f/7da10f219f1ed0add1ef1871f3f3c3cf.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  /* Parallax effect */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.banner-content {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
+  padding: 4rem;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+  max-width: 900px;
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.banner h1 {
+  font-family: var(--font-serif);
+  font-size: 4.5rem;
+  color: #ffd89b;
+  text-transform: capitalize;
+  margin-bottom: 25px;
+  letter-spacing: 3px;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.banner p {
+  font-family: var(--font-main);
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.95);
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+.shop-section {
+  background: #fff9f0;
+  padding-top: 100px;
+}
+
+.section-title span {
+  letter-spacing: 5px;
+  font-size: 0.85rem;
+  color: #8B5A2B;
+  display: block;
+}
+
+.section-title h2 {
+  font-size: 3rem;
+  margin-top: 15px;
+  color: #4b2e2e;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: 60vh;
+    background-attachment: scroll;
+    margin-top: -100px;
+  }
+
+  .banner h1 {
+    font-size: 2.8rem;
+  }
+
+  .banner-content {
+    padding: 2rem;
+    margin: 0 20px;
+  }
+}

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products Crystals | Crystals Gems World</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" href="crystal-new-logo.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
+  <style>
+    .products-hero {
+      padding: 80px 0 60px;
+      /* removed inline gradient, will use style.css or bg-color */
+      text-align: center;
+      position: relative;
+    }
+
+    .products-hero h1 {
+      margin-bottom: 20px;
+    }
+
+    .products-hero p {
+      max-width: 760px;
+      margin: 0 auto;
+      opacity: 0.9;
+      font-size: 1.1rem;
+    }
+
+    .filter-bar {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+      padding: 15px 20px;
+      margin-top: -30px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .filter-pill {
+      border-radius: 999px;
+      border: 1px solid #b87a3a;
+      padding: 6px 16px;
+      font-size: 14px;
+      margin: 4px;
+      background: #fff;
+      color: #5a2c00;
+      cursor: pointer;
+      transition: all .25s ease;
+    }
+
+    .filter-pill.active,
+    .filter-pill:hover {
+      background: #b87a3a;
+      color: #fff;
+    }
+
+    .product-grid-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 16px;
+      height: 100%;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.06);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-grid-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 12px;
+    }
+
+    .product-meta {
+      font-size: 13px;
+      color: #7b6a59;
+      margin-bottom: 6px;
+    }
+
+    .product-grid-card h5 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #4b2e2e;
+      margin-bottom: 6px;
+    }
+
+    .product-price-line {
+      font-weight: 700;
+      color: #8B5A2B;
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+
+    .product-actions a {
+      font-size: 13px;
+    }
+
+    .badge-crystal {
+      background: #f6ece0;
+      color: #8B5A2B;
+      border-radius: 999px;
+      padding: 2px 10px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="products-hero">
+    <div class="container">
+      <h1>Curated Healing Crystal Collections</h1>
+      <p>
+        Crystals are used to enhance the body's own healing abilities, reduce stress and improve the quality of life.
+        Every piece in our collection is hand‑selected for its energy, clarity and beauty so that you can work with
+        crystals that truly support your emotional, physical and spiritual journey.
+      </p>
+      <p class="mt-3">
+        Browse by category, compare energy profiles, download detailed feature documents and discover which
+        crystal wants to work with you today – from timeless Diamonds to warm Amber, soothing Amethyst and many
+        more companions for your chakra and aura.
+      </p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="filter-bar d-flex flex-wrap align-items-center justify-content-between">
+      <div class="mb-2 mb-md-0">
+        <strong style="color:#5a2c00;">Filter by crystal type:</strong>
+      </div>
+      <div>
+        <button class="filter-pill active" data-filter="all">All Products</button>
+        <button class="filter-pill" data-filter="diamond">Diamond</button>
+        <button class="filter-pill" data-filter="amber">Amber</button>
+        <button class="filter-pill" data-filter="amethyst">Amethyst</button>
+        <button class="filter-pill" data-filter="other">Other Crystals</button>
+      </div>
+    </div>
+  </div>
+
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4" id="productsGrid">
+
+        <div class="col-12 col-sm-6 col-lg-4" data-crystal="diamond">
+          <div class="product-grid-card">
+            <span class="badge-crystal mb-2">Diamond</span>
+            <img src="Diamond Jewellery at Michael Hill Canada/32614.alt1_1080x.webp" alt="Diamond Necklace">
+            <div class="product-meta">Clarity • Crown Chakra • High vibration</div>
+            <h5>Radiant Diamond Solitaire Necklace</h5>
+            <div class="product-price-line">₹9,999</div>
+            <p class="mb-2">
+              Timeless diamond solitaire set in a modern halo design that amplifies confidence, self‑worth and
+              luminous protective energy all day long.
+            </p>
+            <div class="product-actions d-flex justify-content-between flex-wrap gap-2">
+              <a href="docs/diamond-solitaire.doc" class="btn btn-sm btn-outline-secondary" download>Download
+                details</a>
+              <a href="compare product.html" class="btn btn-sm btn-outline-dark">Compare crystal</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4" data-crystal="amber">
+          <div class="product-grid-card">
+            <span class="badge-crystal mb-2">Amber</span>
+            <img src="Amber Crystals/imgi_9_amber-energy-dome_2.jpg" alt="Amber Energy Dome">
+            <div class="product-meta">Solar Plexus Chakra • Gentle detox</div>
+            <h5>Amber Energy Dome</h5>
+            <div class="product-price-line">₹1,299</div>
+            <p class="mb-2">
+              A hand‑polished Amber dome that softly absorbs stress from your field, radiating warmth, optimism and
+              gentle grounding during long days.
+            </p>
+            <div class="product-actions d-flex justify-content-between flex-wrap gap-2">
+              <a href="docs/amber-energy-dome.doc" class="btn btn-sm btn-outline-secondary" download>Download
+                details</a>
+              <a href="Amber.html" class="btn btn-sm btn-outline-dark">View Amber range</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4" data-crystal="amber">
+          <div class="product-grid-card">
+            <span class="badge-crystal mb-2">Amber</span>
+            <img src="Amber Crystals/imgi_5_baltic-amber-healing-crystal_6.jpg" alt="Baltic Amber Healing Crystal">
+            <div class="product-meta">Calming • Ancestral wisdom</div>
+            <h5>Baltic Amber Healing Crystal</h5>
+            <div class="product-price-line">₹1,499</div>
+            <p class="mb-2">
+              Raw yet refined Baltic Amber piece ideal for placing on the Solar Plexus chakra to cleanse emotional
+              heaviness and invite courage.
+            </p>
+            <div class="product-actions d-flex justify-content-between flex-wrap gap-2">
+              <a href="docs/baltic-amber-healing.doc" class="btn btn-sm btn-outline-secondary" download>Download
+                details</a>
+              <a href="compare product.html" class="btn btn-sm btn-outline-dark">Compare crystal</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4" data-crystal="amethyst">
+          <div class="product-grid-card">
+            <span class="badge-crystal mb-2">Amethyst</span>
+            <img src="amthyst/imgi_47_Shubhanjali-Amethyst-Stone-Pyramid-1.jpg.webp" alt="Amethyst Pyramid">
+            <div class="product-meta">Third Eye Chakra • Intuition</div>
+            <h5>Amethyst Intuition Pyramid</h5>
+            <div class="product-price-line">₹1,799</div>
+            <p class="mb-2">
+              A perfectly carved Amethyst pyramid that amplifies focus in meditation, eases an overactive mind and
+              supports deep, restorative sleep.
+            </p>
+            <div class="product-actions d-flex justify-content-between flex-wrap gap-2">
+              <a href="docs/amethyst-pyramid.doc" class="btn btn-sm btn-outline-secondary" download>Download details</a>
+              <a href="Amethyst.html" class="btn btn-sm btn-outline-dark">View Amethyst range</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4" data-crystal="amethyst">
+          <div class="product-grid-card">
+            <span class="badge-crystal mb-2">Amethyst</span>
+            <img src="amthyst/earings.webp" alt="Amethyst Earrings">
+            <div class="product-meta">Stress relief • Elegant design</div>
+            <h5>Amethyst Halo Cluster Earrings</h5>
+            <div class="product-price-line">₹1,299</div>
+            <p class="mb-2">
+              Delicate Amethyst studs that keep your aura soothed while adding a refined, mystical glow to both
+              everyday outfits and ceremonial wear.
+            </p>
+            <div class="product-actions d-flex justify-content-between flex-wrap gap-2">
+              <a href="docs/amethyst-earrings.doc" class="btn btn-sm btn-outline-secondary" download>Download
+                details</a>
+              <a href="compare product.html" class="btn btn-sm btn-outline-dark">Compare crystal</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4" data-crystal="other">
+          <div class="product-grid-card">
+            <span class="badge-crystal mb-2">Other</span>
+            <img src="crystale images/rose pendant.webp" alt="Rose Quartz Pendant">
+            <div class="product-meta">Heart Chakra • Self‑love</div>
+            <h5>Rose Quartz Heart Pendant</h5>
+            <div class="product-price-line">₹999</div>
+            <p class="mb-2">
+              Soft, rosy Rose Quartz polished into a heart that rests close to your chest, gently encouraging
+              forgiveness,
+              compassion and emotional renewal.
+            </p>
+            <div class="product-actions d-flex justify-content-between flex-wrap gap-2">
+              <a href="docs/rose-quartz-heart.doc" class="btn btn-sm btn-outline-secondary" download>Download
+                details</a>
+              <a href="other_crystal.html" class="btn btn-sm btn-outline-dark">Browse more</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="components.js"></script>
+  <script>
+    const filterButtons = document.querySelectorAll('.filter-pill');
+    const productCards = document.querySelectorAll('#productsGrid [data-crystal]');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        productCards.forEach(card => {
+          const type = card.getAttribute('data-crystal');
+          if (filter === 'all' || filter === type) {
+            card.classList.remove('d-none');
+          } else {
+            card.classList.add('d-none');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header & Nav styles removed (see index.css) */
+
+
+
+
+.page-banner {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background-image: url("https://i.pinimg.com/736x/3c/d5/85/3cd585453bcfd32bf25bcb9865f73394.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+.page-banner .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+.page-banner .container {
+  position: relative;
+  z-index: 2;
+}
+
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -40%);
+  color: #fff;
+}
+
+
+
+
+
+.text-brown {
+  color: var(--brown-color);
+}
+
+.bg-brown {
+  background-color: var(--brown-color);
+}
+
+
+.crystal-card {
+  border-radius: 15px;
+  background: var(--crystal-gradient);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.crystal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+.crystal-input {
+  border-radius: 8px;
+  border: 1px solid #d4a373;
+}
+
+.crystal-input:focus {
+  border-color: var(--brown-color);
+  box-shadow: 0 0 5px rgba(139, 69, 19, 0.5);
+}
+
+
+.btn-crystal {
+  background: #975e24;
+  color: black;
+  border-radius: 5px;
+  padding: 10px 10px;
+  width: auto;
+  max-width: 200px;
+  transition: 0.3s;
+
+}
+
+.btn-crystal:hover {
+  background: #633202;
+  color: black;
+  transform: scale(1.05);
+}
+
+/* Footer styles removed (see index.css) */

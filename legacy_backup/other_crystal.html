@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Other Crystals | Crystal Gems World</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" href="crystal-new-logo.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
+  <style>
+    :root {
+      --luxury-dark: #1a0f0f;
+      --luxury-gold: #DFC394;
+    }
+
+    .hero-other {
+      height: 60vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('crystale images/other crystale.webp');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
+      color: var(--luxury-gold);
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+      margin-bottom: 1rem;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--secondary-color);
+      position: relative;
+      margin-bottom: 1rem;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: var(--primary-color);
+      margin: 10px auto;
+    }
+
+    .product-grid-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 20px;
+      height: 100%;
+      border: 1px solid rgba(139, 90, 43, 0.1);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .product-grid-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary-color);
+    }
+
+    .product-grid-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      transition: transform 0.5s ease;
+    }
+
+    .product-grid-card:hover img {
+      transform: scale(1.03);
+    }
+
+    .badge-crystal {
+      background: rgba(139, 90, 43, 0.1);
+      color: var(--primary-color);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: inline-block;
+      width: fit-content;
+    }
+
+    .product-title {
+      font-size: 1.25rem;
+      margin: 10px 0;
+      color: var(--secondary-color);
+    }
+
+    .product-price {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: 10px;
+    }
+
+    .product-desc {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .why-choose-section {
+      background: linear-gradient(135deg, var(--luxury-dark) 0%, #2d1b1b 100%);
+      color: white;
+      overflow: hidden;
+    }
+
+    .why-choose-section .section-title {
+      color: var(--luxury-gold);
+    }
+
+    .feature-list li {
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: flex-start;
+      font-size: 1.1rem;
+    }
+
+    .feature-list i {
+      color: var(--luxury-gold);
+      font-size: 1.4rem;
+      margin-right: 15px;
+      margin-top: 3px;
+    }
+
+    .feature-img-wrapper {
+      position: relative;
+      padding: 20px;
+    }
+
+    .feature-img-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 2px solid var(--luxury-gold);
+      border-radius: 16px;
+      transform: translate(-10px, 10px);
+      z-index: 0;
+    }
+
+    .feature-img {
+      position: relative;
+      z-index: 1;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-other {
+        height: 50vh;
+        margin-top: -100px;
+      }
+
+      .feature-img-wrapper {
+        margin-top: 40px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar injected by components.js -->
+
+  <section class="hero-other">
+    <div class="hero-content">
+      <div class="container">
+        <h1>Celestial Healing Collection</h1>
+        <p>Beyond Diamond and Amethyst lies a universe of energetic allies. Discover Rose Quartz, Citrine, Tiger Eye,
+          and more to balance your aura.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Explore Sacred Allies</h2>
+        <p class="section-sub">Hand-selected for spiritual clarity, raw power, and aesthetic perfection.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Product 1 -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+          <div class="product-grid-card">
+            <span class="badge-crystal mb-2">Heart Chakra</span>
+            <img src="crystale images/rose pendant.webp" alt="Rose Quartz Pendant">
+            <h5 class="product-title">Rose Quartz Heart Pendant</h5>
+            <p class="product-price">₹999</p>
+            <p class="product-desc">The stone of universal love. Restores trust and harmony in relationships,
+              encouraging unconditional love.</p>
+            <button class="btn-main w-100">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+          <div class="product-grid-card">
+            <span class="badge-crystal mb-2">Abundance</span>
+            <img src="crystale images/imgi_110_Citrine-Crystal-Meaning-Benefits-and-Uses-1024x682.jpg" alt="Citrine">
+            <h5 class="product-title">Citrine Manifestation Stone</h5>
+            <p class="product-price">₹1,200</p>
+            <p class="product-desc">The Merchant's Stone. Energies of wealth, success, and prosperity. A powerful solar
+              plexus cleanser.</p>
+            <button class="btn-main w-100">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+          <div class="product-grid-card">
+            <span class="badge-crystal mb-2">Protection</span>
+            <img src="crystale images/imgi_151_659bed50abde1.webp" alt="Tiger Eye">
+            <h5 class="product-title">Blue Tiger Eye Bracelet</h5>
+            <p class="product-price">₹1,899</p>
+            <p class="product-desc">A stone of protection that is also very stabilizing and grounding. It enhances
+              integrity, willpower, and self-confidence.</p>
+            <button class="btn-main w-100">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+          <div class="product-grid-card">
+            <span class="badge-crystal mb-2">Prosperity</span>
+            <img src="https://themiraclehub.in/upload/product_img2/62cd5a7b37227.jpg" alt="Pyrite">
+            <h5 class="product-title">Golden Pyrite Cluster</h5>
+            <p class="product-price">₹1,899</p>
+            <p class="product-desc">Known as 'Fool's Gold', Pyrite is a powerful protection stone which shields and
+              protects against all forms of negative vibrations.</p>
+            <button class="btn-main w-100">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+          <div class="product-grid-card">
+            <span class="badge-crystal mb-2">Transformation</span>
+            <img src="crystale images/green-aventurine-pencil-pendant-1.webp" alt="Green Aventurine">
+            <h5 class="product-title">Green Aventurine Pendant</h5>
+            <p class="product-price">₹888</p>
+            <p class="product-desc">The Stone of Opportunity. Thought to be the luckiest of all crystals, especially in
+              manifesting prosperity and wealth.</p>
+            <button class="btn-main w-100">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+          <div class="product-grid-card">
+            <span class="badge-crystal mb-2">Aura Cleanse</span>
+            <img src="crystale images/imgi_108_What-is-Crystal-Tree-and-It-Benefits-1-1024x683.jpg" alt="Crystal Tree">
+            <h5 class="product-title">Sacred Crystal Tree</h5>
+            <p class="product-price">₹2,299</p>
+            <p class="product-desc">A beautiful home decor piece that continuously cleanses the surrounding area and
+              fills it with positive energy.</p>
+            <button class="btn-main w-100">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+          <div class="product-grid-card">
+            <span class="badge-crystal mb-2">Focus</span>
+            <img src="crystale images/imgi_32_6500497789565.jpg" alt="Study Box">
+            <h5 class="product-title">Concentration Ritual Box</h5>
+            <p class="product-price">₹999</p>
+            <p class="product-desc">Specifically curated for students and professionals. Boosts memory, focus, and
+              mental clarity during high-pressure tasks.</p>
+            <button class="btn-main w-100">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+          <div class="product-grid-card">
+            <span class="badge-crystal mb-2">Connections</span>
+            <img src="crystale images/imgi_52_65004ac38a5e8.webp" alt="Relationship Box">
+            <h5 class="product-title">Divine Love Ritual Box</h5>
+            <p class="product-price">₹1,809</p>
+            <p class="product-desc">A bundle designed to invite new relationships or deepen existing ones with the
+              frequency of compassion and empathy.</p>
+            <button class="btn-main w-100">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why-choose-section py-5">
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2 class="section-title text-start">The Miracle Commitment</h2>
+          <p class="mb-4 opacity-75">Every crystal we offer is more than a stone; it is a companion for your journey. We
+            ensuring nothing but the highest vibrational quality for our community.</p>
+          <ul class="feature-list list-unstyled">
+            <li><i class="fas fa-gem"></i> <span><strong>Ethically Sourced & Certified:</strong> We trace every stone to
+                its origin, ensuring ethical mining and 100% natural authenticity.</span></li>
+            <li><i class="fas fa-magic"></i> <span><strong>Cleansed & Programmed:</strong> Each piece is cleansed with
+                sage and charged under moonlight before reaching your hands.</span></li>
+            <li><i class="fas fa-scroll"></i> <span><strong>Expert Guidance:</strong> Every purchase includes a detailed
+                digital guide on how to care for and program your crystal.</span></li>
+            <li><i class="fas fa-shield-alt"></i> <span><span><strong>Premium Packaging:</strong> Designed to protect
+                  both the physical stone and its energetic frequency during transit.</span></li>
+          </ul>
+        </div>
+        <div class="col-lg-6 text-center">
+          <div class="feature-img-wrapper">
+            <img src="crystale images/imgi_111_DSC03382-1024x683.jpg" alt="Crystal Excellence"
+              class="img-fluid feature-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="components.js"></script>
+</body>
+
+</html>
